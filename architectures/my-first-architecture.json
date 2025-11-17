@@ -1,0 +1,23 @@
+{
+    "$schema": "https://calm.finos.org/release/1.0/meta/calm.json",
+    "unique-id": "customer-auth-architecture",
+    "name": "Customer Authentication Architecture", 
+    "description": "Architecture containing a customer authentication service that validates user credentials and manages session tokens",
+    "metadata": [
+        {
+            "version": "1.0.0",
+            "created-by": "Architecture Team",
+            "created-date": "2025-11-17",
+            "environment": "production"
+        }
+    ],
+    "nodes": [
+        {
+            "unique-id": "customer-auth-service",
+            "node-type": "service",
+            "name": "Customer Authentication Service",
+            "description": "A service responsible for validating user credentials, managing user sessions, and generating secure session tokens for authenticated users"
+        }
+    ],
+    "relationships": []
+}
