@@ -1,0 +1,26 @@
+{
+  "id": "relationships/order-service-to-notification",
+  "title": "Order Service To Notification",
+  "description": "Details",
+  "source": "@site/docs/relationships/order-service-to-notification.md",
+  "sourceDirName": "relationships",
+  "slug": "/relationships/order-service-to-notification",
+  "permalink": "/relationships/order-service-to-notification",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "id": "order-service-to-notification",
+    "title": "Order Service To Notification"
+  },
+  "sidebar": "docs",
+  "previous": {
+    "title": "Payment Service To Database",
+    "permalink": "/relationships/payment-service-to-database"
+  },
+  "next": {
+    "title": "Gateway To Notification Service",
+    "permalink": "/relationships/gateway-to-notification-service"
+  }
+}

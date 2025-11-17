@@ -1,0 +1,156 @@
+{
+  "/__docusaurus/debug-5ff": {
+    "__comp": "__comp---theme-debug-config-23-a-2ff",
+    "__context": {
+      "plugin": "plugin---docusaurus-debugb-38-ad3"
+    }
+  },
+  "/__docusaurus/debug/config-5ba": {
+    "__comp": "__comp---theme-debug-config-23-a-2ff",
+    "__context": {
+      "plugin": "plugin---docusaurus-debugb-38-ad3"
+    }
+  },
+  "/__docusaurus/debug/content-a2b": {
+    "__comp": "__comp---theme-debug-contentba-8-ce7",
+    "__context": {
+      "plugin": "plugin---docusaurus-debugb-38-ad3"
+    },
+    "__props": "__props---docusaurus-debug-content-3-c-0-be2"
+  },
+  "/__docusaurus/debug/globalData-c3c": {
+    "__comp": "__comp---theme-debug-global-dataede-0fa",
+    "__context": {
+      "plugin": "plugin---docusaurus-debugb-38-ad3"
+    }
+  },
+  "/__docusaurus/debug/metadata-156": {
+    "__comp": "__comp---theme-debug-site-metadata-68-e-3d4",
+    "__context": {
+      "plugin": "plugin---docusaurus-debugb-38-ad3"
+    }
+  },
+  "/__docusaurus/debug/registry-88c": {
+    "__comp": "__comp---theme-debug-registry-679-501",
+    "__context": {
+      "plugin": "plugin---docusaurus-debugb-38-ad3"
+    }
+  },
+  "/__docusaurus/debug/routes-000": {
+    "__comp": "__comp---theme-debug-routes-946-699",
+    "__context": {
+      "plugin": "plugin---docusaurus-debugb-38-ad3"
+    }
+  },
+  "/search-044": {
+    "__comp": "__comp---theme-search-page-1-a-4-d6f",
+    "__context": {
+      "plugin": "plugin---search-136-801"
+    }
+  },
+  "/-cd1": {
+    "__comp": "__comp---theme-docs-root-5-e-9-0b6",
+    "__context": {
+      "plugin": "plugin---aba-d70"
+    }
+  },
+  "/-ec0": {
+    "__comp": "__comp---theme-doc-version-roota-7-b-5de",
+    "__props": "__props---22-d-307"
+  },
+  "/-cf5": {
+    "__comp": "__comp---theme-doc-roota-94-67a"
+  },
+  "/nodes/admin-1d9": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---nodes-admin-35-a-ce3"
+  },
+  "/nodes/api-gateway-7ec": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---nodes-api-gateway-475-354"
+  },
+  "/nodes/customer-e62": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---nodes-customercc-1-95c"
+  },
+  "/nodes/ecommerce-platform-631": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---nodes-ecommerce-platform-9-bd-075"
+  },
+  "/nodes/inventory-database-71f": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---nodes-inventory-database-05-a-2a8"
+  },
+  "/nodes/inventory-service-00e": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---nodes-inventory-service-376-ab2"
+  },
+  "/nodes/notification-service-659": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---nodes-notification-service-4-a-2-fd1"
+  },
+  "/nodes/order-database-07b": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---nodes-order-database-0-fa-dad"
+  },
+  "/nodes/order-service-580": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---nodes-order-servicef-22-e2f"
+  },
+  "/nodes/payment-database-497": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---nodes-payment-database-985-26d"
+  },
+  "/nodes/payment-service-2ad": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---nodes-payment-servicefa-2-d4b"
+  },
+  "/relationships/admin-interacts-platform-9d3": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---relationships-admin-interacts-platform-446-7a0"
+  },
+  "/relationships/customer-interacts-platform-8af": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---relationships-customer-interacts-platform-046-dbc"
+  },
+  "/relationships/gateway-to-inventory-service-733": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---relationships-gateway-to-inventory-servicee-4-a-f9a"
+  },
+  "/relationships/gateway-to-notification-service-320": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---relationships-gateway-to-notification-service-3-f-0-0ce"
+  },
+  "/relationships/gateway-to-order-service-141": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---relationships-gateway-to-order-service-8-d-6-4c3"
+  },
+  "/relationships/inventory-service-to-database-0e2": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---relationships-inventory-service-to-databased-5-e-9fe"
+  },
+  "/relationships/order-service-to-database-769": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---relationships-order-service-to-database-5-c-6-27e"
+  },
+  "/relationships/order-service-to-notification-34a": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---relationships-order-service-to-notification-4-ad-296"
+  },
+  "/relationships/order-service-to-payment-service-05c": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---relationships-order-service-to-payment-servicea-8-b-54f"
+  },
+  "/relationships/payment-service-to-database-e20": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---relationships-payment-service-to-databasee-24-6ff"
+  },
+  "/relationships/platform-composition-875": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---relationships-platform-composition-869-91c"
+  },
+  "/-bea": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---c-37-d02"
+  }
+}

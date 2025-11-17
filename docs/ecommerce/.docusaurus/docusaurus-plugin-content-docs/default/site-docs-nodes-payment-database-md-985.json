@@ -1,0 +1,26 @@
+{
+  "id": "nodes/payment-database",
+  "title": "Payment Database",
+  "description": "Details",
+  "source": "@site/docs/nodes/payment-database.md",
+  "sourceDirName": "nodes",
+  "slug": "/nodes/payment-database",
+  "permalink": "/nodes/payment-database",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "id": "payment-database",
+    "title": "Payment Database"
+  },
+  "sidebar": "docs",
+  "previous": {
+    "title": "Inventory Database",
+    "permalink": "/nodes/inventory-database"
+  },
+  "next": {
+    "title": "Notification Service",
+    "permalink": "/nodes/notification-service"
+  }
+}

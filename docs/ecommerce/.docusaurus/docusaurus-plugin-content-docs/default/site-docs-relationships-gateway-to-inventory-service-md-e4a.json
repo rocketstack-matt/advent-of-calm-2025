@@ -1,0 +1,26 @@
+{
+  "id": "relationships/gateway-to-inventory-service",
+  "title": "Gateway To Inventory Service",
+  "description": "Details",
+  "source": "@site/docs/relationships/gateway-to-inventory-service.md",
+  "sourceDirName": "relationships",
+  "slug": "/relationships/gateway-to-inventory-service",
+  "permalink": "/relationships/gateway-to-inventory-service",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "id": "gateway-to-inventory-service",
+    "title": "Gateway To Inventory Service"
+  },
+  "sidebar": "docs",
+  "previous": {
+    "title": "Gateway To Order Service",
+    "permalink": "/relationships/gateway-to-order-service"
+  },
+  "next": {
+    "title": "Order Service To Database",
+    "permalink": "/relationships/order-service-to-database"
+  }
+}

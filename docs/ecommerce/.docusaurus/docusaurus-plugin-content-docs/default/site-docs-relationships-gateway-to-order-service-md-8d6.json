@@ -1,0 +1,26 @@
+{
+  "id": "relationships/gateway-to-order-service",
+  "title": "Gateway To Order Service",
+  "description": "Details",
+  "source": "@site/docs/relationships/gateway-to-order-service.md",
+  "sourceDirName": "relationships",
+  "slug": "/relationships/gateway-to-order-service",
+  "permalink": "/relationships/gateway-to-order-service",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "id": "gateway-to-order-service",
+    "title": "Gateway To Order Service"
+  },
+  "sidebar": "docs",
+  "previous": {
+    "title": "Admin Interacts Platform",
+    "permalink": "/relationships/admin-interacts-platform"
+  },
+  "next": {
+    "title": "Gateway To Inventory Service",
+    "permalink": "/relationships/gateway-to-inventory-service"
+  }
+}

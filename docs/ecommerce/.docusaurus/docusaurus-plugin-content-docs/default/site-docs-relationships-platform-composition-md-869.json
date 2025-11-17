@@ -1,0 +1,22 @@
+{
+  "id": "relationships/platform-composition",
+  "title": "Platform Composition",
+  "description": "Details",
+  "source": "@site/docs/relationships/platform-composition.md",
+  "sourceDirName": "relationships",
+  "slug": "/relationships/platform-composition",
+  "permalink": "/relationships/platform-composition",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "id": "platform-composition",
+    "title": "Platform Composition"
+  },
+  "sidebar": "docs",
+  "previous": {
+    "title": "Gateway To Notification Service",
+    "permalink": "/relationships/gateway-to-notification-service"
+  }
+}

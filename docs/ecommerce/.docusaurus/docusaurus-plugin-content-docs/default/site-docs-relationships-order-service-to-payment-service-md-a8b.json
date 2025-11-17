@@ -1,0 +1,26 @@
+{
+  "id": "relationships/order-service-to-payment-service",
+  "title": "Order Service To Payment Service",
+  "description": "Details",
+  "source": "@site/docs/relationships/order-service-to-payment-service.md",
+  "sourceDirName": "relationships",
+  "slug": "/relationships/order-service-to-payment-service",
+  "permalink": "/relationships/order-service-to-payment-service",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "id": "order-service-to-payment-service",
+    "title": "Order Service To Payment Service"
+  },
+  "sidebar": "docs",
+  "previous": {
+    "title": "Order Service To Database",
+    "permalink": "/relationships/order-service-to-database"
+  },
+  "next": {
+    "title": "Inventory Service To Database",
+    "permalink": "/relationships/inventory-service-to-database"
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "id": "nodes/order-service",
+  "title": "Order Service",
+  "description": "Details",
+  "source": "@site/docs/nodes/order-service.md",
+  "sourceDirName": "nodes",
+  "slug": "/nodes/order-service",
+  "permalink": "/nodes/order-service",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "id": "order-service",
+    "title": "Order Service"
+  },
+  "sidebar": "docs",
+  "previous": {
+    "title": "API Gateway",
+    "permalink": "/nodes/api-gateway"
+  },
+  "next": {
+    "title": "Inventory Service",
+    "permalink": "/nodes/inventory-service"
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "id": "relationships/inventory-service-to-database",
+  "title": "Inventory Service To Database",
+  "description": "Details",
+  "source": "@site/docs/relationships/inventory-service-to-database.md",
+  "sourceDirName": "relationships",
+  "slug": "/relationships/inventory-service-to-database",
+  "permalink": "/relationships/inventory-service-to-database",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "id": "inventory-service-to-database",
+    "title": "Inventory Service To Database"
+  },
+  "sidebar": "docs",
+  "previous": {
+    "title": "Order Service To Payment Service",
+    "permalink": "/relationships/order-service-to-payment-service"
+  },
+  "next": {
+    "title": "Payment Service To Database",
+    "permalink": "/relationships/payment-service-to-database"
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "id": "nodes/order-database",
+  "title": "Order Database",
+  "description": "Details",
+  "source": "@site/docs/nodes/order-database.md",
+  "sourceDirName": "nodes",
+  "slug": "/nodes/order-database",
+  "permalink": "/nodes/order-database",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "id": "order-database",
+    "title": "Order Database"
+  },
+  "sidebar": "docs",
+  "previous": {
+    "title": "Payment Service",
+    "permalink": "/nodes/payment-service"
+  },
+  "next": {
+    "title": "Inventory Database",
+    "permalink": "/nodes/inventory-database"
+  }
+}

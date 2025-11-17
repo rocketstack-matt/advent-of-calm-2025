@@ -1,0 +1,26 @@
+{
+  "id": "relationships/order-service-to-database",
+  "title": "Order Service To Database",
+  "description": "Details",
+  "source": "@site/docs/relationships/order-service-to-database.md",
+  "sourceDirName": "relationships",
+  "slug": "/relationships/order-service-to-database",
+  "permalink": "/relationships/order-service-to-database",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "id": "order-service-to-database",
+    "title": "Order Service To Database"
+  },
+  "sidebar": "docs",
+  "previous": {
+    "title": "Gateway To Inventory Service",
+    "permalink": "/relationships/gateway-to-inventory-service"
+  },
+  "next": {
+    "title": "Order Service To Payment Service",
+    "permalink": "/relationships/order-service-to-payment-service"
+  }
+}

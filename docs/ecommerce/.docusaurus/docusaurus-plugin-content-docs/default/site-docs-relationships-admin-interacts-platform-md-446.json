@@ -1,0 +1,26 @@
+{
+  "id": "relationships/admin-interacts-platform",
+  "title": "Admin Interacts Platform",
+  "description": "Details",
+  "source": "@site/docs/relationships/admin-interacts-platform.md",
+  "sourceDirName": "relationships",
+  "slug": "/relationships/admin-interacts-platform",
+  "permalink": "/relationships/admin-interacts-platform",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "id": "admin-interacts-platform",
+    "title": "Admin Interacts Platform"
+  },
+  "sidebar": "docs",
+  "previous": {
+    "title": "Customer Interacts Platform",
+    "permalink": "/relationships/customer-interacts-platform"
+  },
+  "next": {
+    "title": "Gateway To Order Service",
+    "permalink": "/relationships/gateway-to-order-service"
+  }
+}

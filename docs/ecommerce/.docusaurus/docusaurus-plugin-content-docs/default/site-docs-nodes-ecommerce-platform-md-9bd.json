@@ -1,0 +1,26 @@
+{
+  "id": "nodes/ecommerce-platform",
+  "title": "E-Commerce Platform",
+  "description": "Details",
+  "source": "@site/docs/nodes/ecommerce-platform.md",
+  "sourceDirName": "nodes",
+  "slug": "/nodes/ecommerce-platform",
+  "permalink": "/nodes/ecommerce-platform",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "id": "ecommerce-platform",
+    "title": "E-Commerce Platform"
+  },
+  "sidebar": "docs",
+  "previous": {
+    "title": "Notification Service",
+    "permalink": "/nodes/notification-service"
+  },
+  "next": {
+    "title": "Customer Interacts Platform",
+    "permalink": "/relationships/customer-interacts-platform"
+  }
+}

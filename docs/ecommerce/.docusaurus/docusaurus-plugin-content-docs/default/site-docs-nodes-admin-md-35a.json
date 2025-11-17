@@ -1,0 +1,26 @@
+{
+  "id": "nodes/admin",
+  "title": "Admin",
+  "description": "Details",
+  "source": "@site/docs/nodes/admin.md",
+  "sourceDirName": "nodes",
+  "slug": "/nodes/admin",
+  "permalink": "/nodes/admin",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "id": "admin",
+    "title": "Admin"
+  },
+  "sidebar": "docs",
+  "previous": {
+    "title": "Customer",
+    "permalink": "/nodes/customer"
+  },
+  "next": {
+    "title": "API Gateway",
+    "permalink": "/nodes/api-gateway"
+  }
+}

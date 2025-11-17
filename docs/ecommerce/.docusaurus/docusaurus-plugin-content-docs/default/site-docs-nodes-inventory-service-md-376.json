@@ -1,0 +1,26 @@
+{
+  "id": "nodes/inventory-service",
+  "title": "Inventory Service",
+  "description": "Details",
+  "source": "@site/docs/nodes/inventory-service.md",
+  "sourceDirName": "nodes",
+  "slug": "/nodes/inventory-service",
+  "permalink": "/nodes/inventory-service",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "id": "inventory-service",
+    "title": "Inventory Service"
+  },
+  "sidebar": "docs",
+  "previous": {
+    "title": "Order Service",
+    "permalink": "/nodes/order-service"
+  },
+  "next": {
+    "title": "Payment Service",
+    "permalink": "/nodes/payment-service"
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "id": "nodes/inventory-database",
+  "title": "Inventory Database",
+  "description": "Details",
+  "source": "@site/docs/nodes/inventory-database.md",
+  "sourceDirName": "nodes",
+  "slug": "/nodes/inventory-database",
+  "permalink": "/nodes/inventory-database",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "id": "inventory-database",
+    "title": "Inventory Database"
+  },
+  "sidebar": "docs",
+  "previous": {
+    "title": "Order Database",
+    "permalink": "/nodes/order-database"
+  },
+  "next": {
+    "title": "Payment Database",
+    "permalink": "/nodes/payment-database"
+  }
+}

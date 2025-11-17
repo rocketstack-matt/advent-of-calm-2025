@@ -1,0 +1,458 @@
+{
+    "$schema": "https://calm.finos.org/release/1.0/meta/calm.json",
+    "unique-id": "ecommerce-order-processing-platform",
+    "name": "E-commerce Order Processing Platform",
+    "description": "E-commerce order processing platform",
+    "metadata": {
+        "owner": "matt@rocketstack.co",
+        "version": "1.0.0",
+        "created": "2025-11-17",
+        "description": "E-commerce order processing platform",
+        "tags": ["ecommerce", "microservices", "orders"]
+    },
+    "nodes": [
+        {
+            "unique-id": "customer",
+            "node-type": "actor",
+            "name": "Customer",
+            "description": "End customer who places orders and interacts with the e-commerce platform"
+        },
+        {
+            "unique-id": "admin",
+            "node-type": "actor",
+            "name": "Admin",
+            "description": "Administrative user who manages the platform, inventory, and orders"
+        },
+        {
+            "unique-id": "api-gateway",
+            "node-type": "service",
+            "name": "API Gateway",
+            "description": "Central entry point that routes requests to appropriate microservices and handles authentication",
+            "metadata": {
+                "owner": "Platform Team",
+                "repository": "https://github.com/company/api-gateway",
+                "deployment-type": "container"
+            },
+            "interfaces": [
+                {
+                    "unique-id": "gateway-api",
+                    "host": "api.ecommerce.com",
+                    "port": 443
+                },
+                {
+                    "unique-id": "gateway-admin",
+                    "host": "admin.ecommerce.com",
+                    "port": 443,
+                    "path": "/admin"
+                },
+                {
+                    "unique-id": "gateway-health",
+                    "host": "api.ecommerce.com",
+                    "port": 443,
+                    "path": "/health"
+                }
+            ]
+        },
+        {
+            "unique-id": "order-service",
+            "node-type": "service",
+            "name": "Order Service",
+            "description": "Microservice responsible for managing order lifecycle, processing new orders, and tracking order status",
+            "metadata": {
+                "owner": "Order Team",
+                "repository": "https://github.com/company/order-service",
+                "deployment-type": "container",
+                "sla-tier": "tier-1",
+                "business-criticality": "high",
+                "data-classification": "confidential",
+                "runtime": "Java 17",
+                "framework": "Spring Boot"
+            },
+            "interfaces": [
+                {
+                    "unique-id": "order-api",
+                    "host": "order-service.internal",
+                    "port": 8080
+                },
+                {
+                    "unique-id": "order-health",
+                    "host": "order-service.internal",
+                    "port": 8080,
+                    "path": "/actuator/health"
+                },
+                {
+                    "unique-id": "order-metrics",
+                    "host": "order-service.internal",
+                    "port": 8080,
+                    "path": "/actuator/prometheus"
+                }
+            ]
+        },
+        {
+            "unique-id": "inventory-service",
+            "node-type": "service",
+            "name": "Inventory Service",
+            "description": "Microservice that manages product inventory levels, stock availability, and inventory updates",
+            "metadata": {
+                "owner": "Inventory Team",
+                "repository": "https://github.com/company/inventory-service",
+                "deployment-type": "container",
+                "sla-tier": "tier-1",
+                "business-criticality": "high",
+                "cache-strategy": "Redis",
+                "runtime": "Node.js 18"
+            },
+            "interfaces": [
+                {
+                    "unique-id": "inventory-api",
+                    "host": "inventory-service.internal",
+                    "port": 8081
+                },
+                {
+                    "unique-id": "inventory-health",
+                    "host": "inventory-service.internal",
+                    "port": 8081,
+                    "path": "/health"
+                }
+            ]
+        },
+        {
+            "unique-id": "payment-service",
+            "node-type": "service",
+            "name": "Payment Service",
+            "description": "Microservice that handles payment processing, transaction authorization, and payment method management",
+            "metadata": {
+                "owner": "Payment Team",
+                "repository": "https://github.com/company/payment-service",
+                "deployment-type": "container",
+                "sla-tier": "tier-1",
+                "business-criticality": "critical",
+                "compliance": ["PCI-DSS Level 1", "SOX"],
+                "security-classification": "restricted",
+                "runtime": "Java 17",
+                "encryption": "end-to-end"
+            },
+            "interfaces": [
+                {
+                    "unique-id": "payment-api",
+                    "host": "payment-service.internal",
+                    "port": 8082
+                },
+                {
+                    "unique-id": "payment-health",
+                    "host": "payment-service.internal",
+                    "port": 8082,
+                    "path": "/health"
+                },
+                {
+                    "unique-id": "payment-webhook",
+                    "host": "payment-service.internal",
+                    "port": 8082,
+                    "path": "/webhook"
+                }
+            ]
+        },
+        {
+            "unique-id": "order-database",
+            "node-type": "database",
+            "name": "Order Database",
+            "description": "Primary database storing order information, customer details, and order history",
+            "metadata": {
+                "database-type": "PostgreSQL",
+                "version": "15.0",
+                "backup-strategy": "daily-snapshots",
+                "replication": "master-slave",
+                "monitoring": "enabled"
+            },
+            "interfaces": [
+                {
+                    "unique-id": "order-db-connection",
+                    "host": "order-db.internal",
+                    "port": 5432
+                }
+            ]
+        },
+        {
+            "unique-id": "inventory-database",
+            "node-type": "database",
+            "name": "Inventory Database",
+            "description": "Database storing product catalog, inventory levels, and stock management data",
+            "metadata": {
+                "database-type": "PostgreSQL",
+                "version": "15.0",
+                "read-replicas": 2,
+                "cache-layer": "Redis",
+                "backup-frequency": "hourly"
+            },
+            "interfaces": [
+                {
+                    "unique-id": "inventory-db-connection",
+                    "host": "inventory-db.internal",
+                    "port": 5433
+                }
+            ]
+        },
+        {
+            "unique-id": "payment-database",
+            "node-type": "database",
+            "name": "Payment Database",
+            "description": "Secure database storing payment transactions, audit logs, and compliance records",
+            "metadata": {
+                "compliance": ["PCI-DSS", "SOX"],
+                "encryption": "AES-256",
+                "backup-frequency": "continuous",
+                "retention-period": "7-years"
+            },
+            "interfaces": [
+                {
+                    "unique-id": "payment-db-connection",
+                    "host": "payment-db.internal",
+                    "port": 5434
+                }
+            ]
+        },
+        {
+            "unique-id": "notification-service",
+            "node-type": "service",
+            "name": "Notification Service",
+            "description": "Service responsible for sending order confirmations, shipping updates, and promotional communications",
+            "metadata": {
+                "owner": "Communication Team",
+                "repository": "https://github.com/company/notification-service",
+                "deployment-type": "container",
+                "sla-tier": "tier-2"
+            },
+            "interfaces": [
+                {
+                    "unique-id": "notification-api",
+                    "host": "notification-service.internal",
+                    "port": 8083
+                },
+                {
+                    "unique-id": "notification-health",
+                    "host": "notification-service.internal",
+                    "port": 8083,
+                    "path": "/health"
+                }
+            ]
+        },
+        {
+            "unique-id": "ecommerce-platform",
+            "node-type": "system",
+            "name": "E-Commerce Platform",
+            "description": "Complete e-commerce order processing system containing all microservices and supporting infrastructure"
+        }
+    ],
+    "relationships": [
+        {
+            "unique-id": "customer-interacts-platform",
+            "description": "Customer interacts with the e-commerce platform to browse products and place orders",
+            "relationship-type": {
+                "interacts": {
+                    "actor": "customer",
+                    "nodes": ["api-gateway"]
+                }
+            }
+        },
+        {
+            "unique-id": "admin-interacts-platform",
+            "description": "Admin user interacts with the platform to manage orders, inventory, and system configuration",
+            "relationship-type": {
+                "interacts": {
+                    "actor": "admin",
+                    "nodes": ["api-gateway"]
+                }
+            }
+        },
+        {
+            "unique-id": "gateway-to-order-service",
+            "description": "API Gateway routes order-related requests to the Order Service",
+            "relationship-type": {
+                "connects": {
+                    "source": {
+                        "node": "api-gateway",
+                        "interfaces": ["gateway-api"]
+                    },
+                    "destination": {
+                        "node": "order-service",
+                        "interfaces": ["order-api"]
+                    }
+                }
+            },
+            "protocol": "HTTP",
+            "metadata": {
+                "load-balancing": "round-robin",
+                "timeout": "30s",
+                "retry-policy": "exponential-backoff"
+            }
+        },
+        {
+            "unique-id": "gateway-to-inventory-service",
+            "description": "API Gateway routes inventory-related requests to the Inventory Service",
+            "relationship-type": {
+                "connects": {
+                    "source": {
+                        "node": "api-gateway",
+                        "interfaces": ["gateway-api"]
+                    },
+                    "destination": {
+                        "node": "inventory-service",
+                        "interfaces": ["inventory-api"]
+                    }
+                }
+            },
+            "protocol": "HTTP",
+            "metadata": {
+                "load-balancing": "round-robin",
+                "timeout": "30s",
+                "cache-strategy": "redis"
+            }
+        },
+        {
+            "unique-id": "order-service-to-database",
+            "description": "Order Service connects to Order Database to persist and retrieve order data",
+            "relationship-type": {
+                "connects": {
+                    "source": {
+                        "node": "order-service",
+                        "interfaces": ["order-api"]
+                    },
+                    "destination": {
+                        "node": "order-database",
+                        "interfaces": ["order-db-connection"]
+                    }
+                }
+            },
+            "protocol": "JDBC",
+            "metadata": {
+                "connection-pool-size": 20,
+                "connection-timeout": "5s",
+                "sla": "< 100ms p95",
+                "monitoring": true
+            }
+        },
+        {
+            "unique-id": "order-service-to-payment-service",
+            "description": "Order Service connects to Payment Service to process payments for confirmed orders",
+            "relationship-type": {
+                "connects": {
+                    "source": {
+                        "node": "order-service",
+                        "interfaces": ["order-api"]
+                    },
+                    "destination": {
+                        "node": "payment-service",
+                        "interfaces": ["payment-api"]
+                    }
+                }
+            },
+            "protocol": "HTTP",
+            "metadata": {
+                "circuit-breaker": true,
+                "timeout": "10s",
+                "retry-attempts": 3,
+                "sla": "< 2s p95"
+            }
+        },
+        {
+            "unique-id": "inventory-service-to-database",
+            "description": "Inventory Service connects to Inventory Database to manage stock levels and product information",
+            "relationship-type": {
+                "connects": {
+                    "source": {
+                        "node": "inventory-service",
+                        "interfaces": ["inventory-api"]
+                    },
+                    "destination": {
+                        "node": "inventory-database",
+                        "interfaces": ["inventory-db-connection"]
+                    }
+                }
+            },
+            "protocol": "JDBC",
+            "metadata": {
+                "connection-pool-size": 15,
+                "connection-timeout": "5s",
+                "read-replica": true,
+                "monitoring": true
+            }
+        },
+        {
+            "unique-id": "payment-service-to-database",
+            "description": "Payment Service connects to Payment Database for transaction logging and audit trails",
+            "relationship-type": {
+                "connects": {
+                    "source": {
+                        "node": "payment-service",
+                        "interfaces": ["payment-api"]
+                    },
+                    "destination": {
+                        "node": "payment-database",
+                        "interfaces": ["payment-db-connection"]
+                    }
+                }
+            },
+            "protocol": "JDBC",
+            "metadata": {
+                "connection-pool-size": 10,
+                "connection-timeout": "3s",
+                "encryption": "TLS 1.3",
+                "audit-logging": "mandatory",
+                "sla": "< 50ms p95"
+            }
+        },
+        {
+            "unique-id": "order-service-to-notification",
+            "description": "Order Service connects to Notification Service to send order confirmations and updates",
+            "relationship-type": {
+                "connects": {
+                    "source": {
+                        "node": "order-service",
+                        "interfaces": ["order-api"]
+                    },
+                    "destination": {
+                        "node": "notification-service",
+                        "interfaces": ["notification-api"]
+                    }
+                }
+            },
+            "protocol": "HTTP",
+            "metadata": {
+                "async-pattern": "fire-and-forget",
+                "retry-policy": "exponential-backoff",
+                "timeout": "5s"
+            }
+        },
+        {
+            "unique-id": "gateway-to-notification-service",
+            "description": "API Gateway routes notification-related admin requests to Notification Service",
+            "relationship-type": {
+                "connects": {
+                    "source": {
+                        "node": "api-gateway",
+                        "interfaces": ["gateway-admin"]
+                    },
+                    "destination": {
+                        "node": "notification-service",
+                        "interfaces": ["notification-api"]
+                    }
+                }
+            },
+            "protocol": "HTTP",
+            "metadata": {
+                "authentication": "OAuth2",
+                "authorization": "admin-only"
+            }
+        },
+        {
+            "unique-id": "platform-composition",
+            "description": "E-Commerce Platform system is composed of all microservices and supporting infrastructure",
+            "relationship-type": {
+                "composed-of": {
+                    "container": "ecommerce-platform",
+                    "nodes": ["api-gateway", "order-service", "inventory-service", "payment-service", "notification-service", "order-database", "inventory-database", "payment-database"]
+                }
+            }
+        }
+    ]
+}

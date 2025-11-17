@@ -1,0 +1,26 @@
+{
+  "id": "relationships/gateway-to-notification-service",
+  "title": "Gateway To Notification Service",
+  "description": "Details",
+  "source": "@site/docs/relationships/gateway-to-notification-service.md",
+  "sourceDirName": "relationships",
+  "slug": "/relationships/gateway-to-notification-service",
+  "permalink": "/relationships/gateway-to-notification-service",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "id": "gateway-to-notification-service",
+    "title": "Gateway To Notification Service"
+  },
+  "sidebar": "docs",
+  "previous": {
+    "title": "Order Service To Notification",
+    "permalink": "/relationships/order-service-to-notification"
+  },
+  "next": {
+    "title": "Platform Composition",
+    "permalink": "/relationships/platform-composition"
+  }
+}

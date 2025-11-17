@@ -1,0 +1,26 @@
+{
+  "id": "relationships/payment-service-to-database",
+  "title": "Payment Service To Database",
+  "description": "Details",
+  "source": "@site/docs/relationships/payment-service-to-database.md",
+  "sourceDirName": "relationships",
+  "slug": "/relationships/payment-service-to-database",
+  "permalink": "/relationships/payment-service-to-database",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "id": "payment-service-to-database",
+    "title": "Payment Service To Database"
+  },
+  "sidebar": "docs",
+  "previous": {
+    "title": "Inventory Service To Database",
+    "permalink": "/relationships/inventory-service-to-database"
+  },
+  "next": {
+    "title": "Order Service To Notification",
+    "permalink": "/relationships/order-service-to-notification"
+  }
+}
