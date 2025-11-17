@@ -13,11 +13,64 @@
     ],
     "nodes": [
         {
+            "unique-id": "end-user",
+            "node-type": "actor",
+            "name": "End User",
+            "description": "Customer or end user who authenticates with the system to access protected resources"
+        },
+        {
+            "unique-id": "customer-auth-system",
+            "node-type": "system",
+            "name": "Customer Authentication System",
+            "description": "Complete authentication system providing secure user credential validation and session management capabilities"
+        },
+        {
             "unique-id": "customer-auth-service",
             "node-type": "service",
             "name": "Customer Authentication Service",
             "description": "A service responsible for validating user credentials, managing user sessions, and generating secure session tokens for authenticated users"
+        },
+        {
+            "unique-id": "customer-auth-database",
+            "node-type": "database",
+            "name": "Customer Authentication Database",
+            "description": "Primary database storing user credentials, session tokens, and authentication-related data for the customer authentication service"
         }
     ],
-    "relationships": []
+    "relationships": [
+        {
+            "unique-id": "user-interacts-with-auth-service",
+            "description": "End user interacts with customer authentication service to login and manage sessions",
+            "relationship-type": {
+                "interacts": {
+                    "actor": "end-user",
+                    "nodes": ["customer-auth-service"]
+                }
+            }
+        },
+        {
+            "unique-id": "auth-system-composed-of-service",
+            "description": "Customer authentication system is composed of the authentication service and database",
+            "relationship-type": {
+                "composed-of": {
+                    "container": "customer-auth-system",
+                    "nodes": ["customer-auth-service", "customer-auth-database"]
+                }
+            }
+        },
+        {
+            "unique-id": "auth-service-to-database",
+            "description": "Customer authentication service connects to database for storing and retrieving user data",
+            "relationship-type": {
+                "connects": {
+                    "source": {
+                        "node": "customer-auth-service"
+                    },
+                    "destination": {
+                        "node": "customer-auth-database"
+                    }
+                }
+            }
+        }
+    ]
 }
