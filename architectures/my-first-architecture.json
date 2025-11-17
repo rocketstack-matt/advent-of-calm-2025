@@ -3,14 +3,13 @@
     "unique-id": "customer-auth-architecture",
     "name": "Customer Authentication Architecture", 
     "description": "Architecture containing a customer authentication service that validates user credentials and manages session tokens",
-    "metadata": [
-        {
-            "version": "1.0.0",
-            "created-by": "Architecture Team",
-            "created-date": "2025-11-17",
-            "environment": "production"
-        }
-    ],
+    "metadata": {
+        "owner": "matt@rocketstack.co",
+        "version": "1.0.0",
+        "created": "2025-11-17",
+        "description": "A demonstration architecture showcasing customer authentication patterns for learning CALM modeling",
+        "tags": ["learning", "authentication", "demo"]
+    },
     "nodes": [
         {
             "unique-id": "end-user",
@@ -29,6 +28,12 @@
             "node-type": "service",
             "name": "Customer Authentication Service",
             "description": "A service responsible for validating user credentials, managing user sessions, and generating secure session tokens for authenticated users",
+            "metadata": {
+                "tech-owner": "Authentication Team",
+                "repository": "https://github.com/company/customer-auth-service",
+                "deployment-type": "container",
+                "sla-tier": "tier-1"
+            },
             "interfaces": [
                 {
                     "unique-id": "auth-api-interface",
@@ -93,6 +98,11 @@
                         "interfaces": ["auth-db-interface"]
                     }
                 }
+            },
+            "metadata": {
+                "latency-sla": "< 100ms",
+                "monitoring": true,
+                "circuit-breaker": true
             }
         }
     ]
