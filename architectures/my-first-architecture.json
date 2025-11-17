@@ -28,13 +28,34 @@
             "unique-id": "customer-auth-service",
             "node-type": "service",
             "name": "Customer Authentication Service",
-            "description": "A service responsible for validating user credentials, managing user sessions, and generating secure session tokens for authenticated users"
+            "description": "A service responsible for validating user credentials, managing user sessions, and generating secure session tokens for authenticated users",
+            "interfaces": [
+                {
+                    "unique-id": "auth-api-interface",
+                    "definition-url": "file://./patterns/rest-api-interface.json",
+                    "config": {
+                        "host": "api.example.com",
+                        "port": 443,
+                        "basePath": "/api/v1",
+                        "authentication": "OAuth2"
+                    }
+                }
+            ]
         },
         {
             "unique-id": "customer-auth-database",
             "node-type": "database",
             "name": "Customer Authentication Database",
-            "description": "Primary database storing user credentials, session tokens, and authentication-related data for the customer authentication service"
+            "description": "Primary database storing user credentials, session tokens, and authentication-related data for the customer authentication service",
+            "interfaces": [
+                {
+                    "unique-id": "auth-db-interface",
+                    "protocol": "JDBC",
+                    "host": "db.example.com",
+                    "port": 5432,
+                    "database": "customer_auth_db"
+                }
+            ]
         }
     ],
     "relationships": [
@@ -64,10 +85,12 @@
             "relationship-type": {
                 "connects": {
                     "source": {
-                        "node": "customer-auth-service"
+                        "node": "customer-auth-service",
+                        "interfaces": ["auth-api-interface"]
                     },
                     "destination": {
-                        "node": "customer-auth-database"
+                        "node": "customer-auth-database",
+                        "interfaces": ["auth-db-interface"]
                     }
                 }
             }

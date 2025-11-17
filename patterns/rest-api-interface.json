@@ -1,0 +1,43 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "$id": "https://patterns.example.com/rest-api-interface.json",
+    "title": "REST API Interface Schema",
+    "description": "JSON Schema definition for a standard REST API interface",
+    "type": "object",
+    "properties": {
+        "host": {
+            "type": "string",
+            "description": "The hostname or IP address where the API is hosted",
+            "examples": ["api.example.com", "localhost", "192.168.1.100"]
+        },
+        "port": {
+            "type": "number",
+            "description": "The port number on which the API is accessible",
+            "minimum": 1,
+            "maximum": 65535,
+            "examples": [80, 443, 8080, 3000]
+        },
+        "basePath": {
+            "type": "string",
+            "description": "The base path for the API endpoints",
+            "pattern": "^/.*",
+            "examples": ["/api/v1", "/rest", "/api"]
+        },
+        "authentication": {
+            "type": "string",
+            "description": "The authentication method used by the API",
+            "enum": ["OAuth2", "API-Key", "None"]
+        },
+        "description": {
+            "type": "string",
+            "description": "Optional description of the API interface"
+        },
+        "version": {
+            "type": "string",
+            "description": "Optional version identifier for the API",
+            "examples": ["v1", "1.0.0", "2.1.0-beta"]
+        }
+    },
+    "required": ["host", "port", "basePath", "authentication"],
+    "additionalProperties": false
+}
